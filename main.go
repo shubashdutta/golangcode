@@ -23,7 +23,7 @@ func main() {
 	c := setupCors()
 	handler := c.Handler(r)
 
-	port := "8080" // Change the port to your desired value
+	port := "8081" // Change the port to your desired value
 
 	fmt.Printf("Server is ready and running on port %s...\n", port)
 	log.Fatal(http.ListenAndServe(":"+port, handler))
