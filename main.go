@@ -10,7 +10,7 @@ import (
 )
 func setupCors() *cors.Cors {
 	return cors.New(cors.Options{
-		AllowedOrigins:   []string{"https://saibabasevasadantrust.com"}, // Replace with your frontend's URL
+		AllowedOrigins:   []string{"https://shuas.onrender.com""}, // Replace with your frontend's URL
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowedHeaders:   []string{"Authorization", "Content-Type"},
 		AllowCredentials: true,
