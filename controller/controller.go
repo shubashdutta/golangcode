@@ -36,8 +36,10 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "welcome to sai baba turst web site")
 }
 func Singup(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	w.Header().Set("Allow-Control-Allow-Methods", "POST")
+	 w.Header().Set("Access-Control-Allow-Origin", "https://shuas.onrender.com")
+    w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
+    w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+    w.Header().Set("Access-Control-Allow-Credentials", "true")
 	var user moddel.User
 
 	_ = json.NewDecoder(r.Body).Decode(&user)
